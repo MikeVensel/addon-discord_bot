@@ -5,6 +5,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 RUN apk update && \
     apk add --no-cache \
+    bash
     nodejs-current \
     npm
 

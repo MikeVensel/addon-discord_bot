@@ -22,7 +22,7 @@ RUN apk update && \
     nodejs-current \
     npm
 
-COPY package.json /
+COPY package.json package-lock.json /
 RUN cd / && npm install
 COPY server.js /
 

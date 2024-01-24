@@ -1,19 +1,25 @@
-#!/usr/bin/with-contenv bashio
-set +u
+#!/bin/sh
 
-CONFIG_PATH=/data/options.json
+# Uncomment this block and fill in your values if you are not using environment variables
+# BOT_TOKEN=bot_token
+# MQTT_URL=mqtt_url
+# MQTT_PORT=mqtt_port
+# MQTT_USERNAME=mqtt_username
+# MQTT_PASSWORD=mqtt_password
+# TOPIC_ONLINE=topic_online
+# TOPIC_VOICE=topic_voice
+# TOPIC_COMMAND=topic_command
+# GUILD_ID=guild_id
+# YOUR_ID=your_id
 
-BOT_TOKEN=$(bashio::config 'bot_token')
-URL=$(bashio::config 'mqtt_url')
-PORT=$(bashio::config 'mqtt_port')
-USERNAME=$(bashio::config 'mqtt_username')
-PASSWORD=$(bashio::config 'mqtt_password')
-ONLINE=$(bashio::config 'topic_online')
-VOICE=$(bashio::config 'topic_voice')
-COMMAND=$(bashio::config 'topic_command')
-GUILD=$(bashio::config 'guild_id')
-YOUR=$(bashio::config 'your_id')
-
-bashio::log.info "Starting..."
-
-node ./server.js $BOT_TOKEN $URL $PORT $USERNAME $PASSWORD $ONLINE $COMMAND $VOICE $GUILD $YOUR
+node ./server.js \
+$BOT_TOKEN \
+$MQTT_URL \
+$MQTT_PORT \
+$MQTT_USERNAME \
+$MQTT_PASSWORD \
+$TOPIC_ONLINE \
+$TOPIC_COMMAND \
+$TOPIC_VOICE \
+$GUILD_ID \
+$YOUR_ID

@@ -1,11 +1,11 @@
 {
-  "name": "discord_bot",
+  "name": "discord_mqtt_bot",
   "version": "1.0.0",
   "description": "Discord.js on Docker",
-  "author": "kjell5317",
+  "author": "MikeVensel",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kjell5317/discord-bot"
+    "url": "https://github.com/MikeVensel/addon-discord_bot"
   },
   "main": "server.js",
   "scripts": {
